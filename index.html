@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/48/000000/apple-calculator.png">
+  <title>Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <section class="logo">
+    <img src="images/logo.svg" alt="Logo">
+  </section>
+  <div class="calculator">
+    <div class="inputs">
+      <div>
+        <div class="bill">
+          <p>Bill</p>
+          <div class="inputdiv">
+            <img src="images/icon-dollar.svg">
+            <input type="number" placeholder="0">
+          </div>
+        </div>
+        <div class="tipvalue">
+          <p>Select Tip %</p>
+          <div class="tippercent">
+            <button data-percent="0.05">5%</button>
+            <button class="" data-percent="0.1">10%</button>
+            <button data-percent="0.15">15%</button>
+            <button data-percent="0.25">25%</button>
+            <button data-percent="0.50">50%</button>
+            <input type="number" placeholder="Custom" >
+          </div>
+        </div>
+        <div class="numberofpeople">
+          <div class="numberofpeopletext">
+            <p>Number Of People</p>
+            <p class="errorvalue">Can't Be Zero</p>
+          </div>
+          <div class="inputdiv">
+            <img src="images/icon-person.svg">
+            <input type="number" placeholder="0">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="outputs">
+      <div class="outputcont">
+        <div class="total">
+          <div class="tipamount">
+            <p>Tip Amount <br> <span>/ person</span></p>
+            <p class="tipamountnumber">$<span>0.00</span></p>
+          </div>
+          <div class="tipamount">
+            <p>Total <br> <span>/ person</span></p>
+            <p class="totalnumber">$<span>0.00</span></p>
+          </div>
+        </div>
+        <button class="">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="errormsg">
+    <p>Fill All The Field</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

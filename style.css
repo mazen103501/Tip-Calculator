@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #c5e4e7;
+}
+.logo{
+    width: fit-content;
+    margin: 100px auto 50px;
+}
+.calculator{
+    width: 700px;
+    background: white;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.calculator .inputs{
+    flex-basis: 47%;
+}
+.calculator .outputs{
+    flex-basis: 47%;
+}
+.calculator .inputs > div {
+    padding: 0 10px;
+}
+.calculator .inputs > div .bill{
+    width: 100%;
+    margin-bottom: 35px;
+}
+.calculator .inputs > div .bill p{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.808);
+}
+
+
+/* inputdiv component */
+.inputdiv{
+    display: flex;
+    position: relative;
+}
+.inputdiv img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+.inputdiv input{
+    width: 100%;
+    direction: rtl;
+    padding: 0 10px;
+    background: #f3f8fb;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 18px;
+    outline: none;
+}
+.inputdiv input::placeholder{
+    color: #285c5680;
+}
+.inputdiv input:focus{
+    border: 2px solid #89d4cb;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+
+
+
+.calculator .inputs > div .tipvalue{
+    margin-bottom: 35px;
+}
+.calculator .inputs > div .tipvalue p{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.808);
+}
+.calculator .inputs > div .tipvalue .tippercent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.calculator .inputs > div .tipvalue .tippercent button{
+    border: none;
+    color: white;
+    background: #00474b;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.calculator .inputs > div .tipvalue .tippercent button.btn-active{
+    background: #9fe8df;
+    color: #175f5d;
+}
+.calculator .inputs > div .tipvalue .tippercent input{
+    width: 10px;
+    border: none;
+    font-size: 18px;
+    direction: rtl;
+    outline: none;
+    background: #f3f8fb;
+}
+.calculator .inputs > div .tipvalue .tippercent input:focus{
+    border: 2px solid #89d4cb;
+    border-radius: 4px;
+}
+.calculator .inputs > div .tipvalue .tippercent input::placeholder{
+    text-align: center;
+}
+.calculator .inputs > div .tipvalue .tippercent > *{
+    flex-basis: 30%;
+    padding: 5px 0;
+    margin-top: 5px;
+    height: 34px;
+}
+
+
+
+.calculator .inputs > div .numberofpeople{
+    margin-bottom: 10px;
+}
+.calculator .inputs > div .numberofpeople .numberofpeopletext{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.calculator .inputs > div .numberofpeople .numberofpeopletext p{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.808);
+}
+.calculator .inputs > div .numberofpeople .numberofpeopletext .errorvalue{
+    color: red;
+    display: none;
+}
+input.errorvalue{
+    border:1px solid red !important;
+}
+
+
+
+
+.outputs .outputcont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    background: #00474b;
+    color: white;
+    border-radius: 15px;
+    /* align-items: center; */
+}
+.outputs .outputcont .total{
+    padding: 0 30px;
+}
+.outputs .outputcont .total .tipamount{
+    display: flex;
+    justify-content: space-between;
+}
+.outputs .outputcont .total .tipamount:last-of-type{
+    margin-top: 20px;
+}
+.outputs .outputcont .total .tipamount p:first-of-type{
+    font-size: 12px;
+    color: #eeeff1;
+}
+.outputs .outputcont .total .tipamount p:first-of-type span{
+    font-size: 12px;
+    color: #eeeff16c;
+}
+.outputs .outputcont .total .tipamount .tipamountnumber , .outputs .outputcont .total .tipamount .totalnumber{
+    color: #25c1aa;
+    font-size: 30px;
+}
+.outputs .outputcont button{
+    all: unset;
+    width: 250px;
+    height: 40px;
+    background: #0d686d;
+    border-radius: 5px;
+    color: #085e60;
+    text-align: center;
+    margin: 50px auto 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+.outputs .outputcont button.reset-active{
+    color: #175f5d;
+    background: #9fe8df;
+    pointer-events: all;
+}
+
+
+
+
+
+.errormsg{
+    display: none;
+    color: red;
+    font-size: 25px;
+    width: fit-content;
+    margin: 70px auto;
+}
+
+@media (max-width:580px){
+    .calculator{
+        flex-direction: column;
+        width: 100%;
+    }
+    .outputs{
+        margin-top: 30px;
+    }
+    .logo{
+        margin-top: 25px;
+    }
+}
+@media (max-width:375px){
+    .calculator .inputs > div .tipvalue .tippercent button{
+        flex-basis: 48%;
+    }
+    .calculator .inputs > div .tipvalue .tippercent input{
+        flex-basis: 48%;
+    }
+}
